@@ -1,5 +1,7 @@
 # Final_project_semester1
 
+DIY Laser Harp (exactly what it says)
+
 The basic outline of the harp:
 A laser beam is shone. A stepper motor with a mirror divides it into nine beams. When one or more of the beams are cut, the light sensor (Light Detecting Resistor, LDR) detects it. According to the corresponding motor positions, it sends signals to the Arduino, which in turn produces the respective notes through a computer or keyboard.
 
