@@ -11,6 +11,9 @@ A mirror is attached to the motor. The laser beam is directed to the mirror. The
 How the harp knows which beam has been cut:
 Every beam has a corresponding motor position. When a beam is cut, it reflects onto the sensor, which detects an increase in light intensity. The light sensor then looks for the position of the motor at the instant the beam was cut, and thus identifies the beam in question.
 
+Video of resulted harp (Version 1.0): 
+https://drive.google.com/drive/folders/1LP4P3mUgZGCvAZscr6zilWwkteYAzwnV?usp=sharing
+
 Needed Materials:
 - Stepper motor (used Nema 17)
 - Stepper motor suport
