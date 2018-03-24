@@ -1,4 +1,4 @@
-# Final_project_semester1
+# Final_project_semester_1___Frameless_Harp
 
 DIY Laser Harp (exactly what it says)
 
@@ -11,18 +11,60 @@ A mirror is attached to the motor. The laser beam is directed to the mirror. The
 How the harp knows which beam has been cut:
 Every beam has a corresponding motor position. When a beam is cut, it reflects onto the sensor, which detects an increase in light intensity. The light sensor then looks for the position of the motor at the instant the beam was cut, and thus identifies the beam in question.
 
-Also connection to PC:
-There are two options that you can take:
-Option 1:
-  Plug your harp directly into a MIDI keyboard and you are good to go.
-  But if you want more control then go for Option 2.
+Needed Materials:
+- Stepper motor (used Nema 17)
+- Stepper motor suport
+- Driver for stepper  (used A4988)
+- Audio amplifier (used PAM8403)
+- LDR
+- Buttons
+- Potentiometer 10 K
+- Stereo potentiometer 10 K (optional, volume control)
+- 10uF electrolytic cap
+- Green laser
+- 2x breadboards
+- 2x 5 Watts speakers
+- 2x 5V charger
+- Arduino uno
+- Wires
+- 12V power source
+- Container box
+- tranzistor (used 2n2222)
 
-Option 2: 
-For this option you need a MIDI to USB converter, like in the first picture.
-This works with any software that deals with MIDI, Here we show you how to go about it using FL Studio:
+Downsides:
+Current version didn't meet the expectations, but it isn't too far from it (lacks speed) and clarity due to used amplifier and sound creation (distortion). 
 
-3rd Picture: First open FL Studio up, then click the OPTIONS button on the upper left corner and navigate to the MIDI settings. then select your MIDI device.
+Cabling the motor:
+https://www.pololu.com/product/1182
+full step mode
 
-4th picture: The next step reveals the magic of MIDI, Right click on one of the tabs, in the Insert tab you will see a whole bunch of different sounds available to you, ranging from the classic sounds to the most modern sounding synths. Feel free to experiment with these sounds until you find your favourite one.  
+Amplifier and speakers:
+https://www.optimusdigital.ro/en/audio-amplifiers/614-modul-mini-amplificator-pam8403-in-clasa-d-stereo-3-w.html
++ power source/charger of 5 volts
 
-Materiale: https://docs.google.com/spreadsheets/d/1WGp8LJNheEEPTvfJexgfyGNyoK_Kcl4Zfi_gMkAJmkE/edit?usp=sharing
+Green laser:
+plus of power source -> collector tranzistor
+arduino uno -> base tranzistor
+emitor tranzistor -> plus laser
+minus laser -> minus of power source & ground arduino
+
+LDR:
+https://www.youtube.com/watch?v=4fN1aJMH9mM
+standard configuration, just replaced the rezistor with a potentiometer
+
+Button:
+standard configuration
+
+Volume control:
+http://www.instructables.com/id/PAM8403-6W-STEREO-AMPLIFIER-TUTORIAL/
+step 7
+
+Arduino pins:
+
+STEP (stepper driver) 2
+DIRECTION (stepper driver) 3
+Laser 7
+Button -> 12   
+LDR -> A0 
+Left Sound (audio amplifier)10
+Right Sound (audio amplifier)11
